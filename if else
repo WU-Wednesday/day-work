@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	int a;
+printf("请输入你的年龄：");
+	scanf("%d",&a);
+	printf("年龄：%d\n",a);
+	if(a<18)
+		printf("小屁娃儿\n");
+	else if(a=18)
+	printf("刚好十八\n");
+	else
+		printf("成年人\n");
+	return 0;
+}

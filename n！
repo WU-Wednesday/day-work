@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+  int i,n,z;
+  z=1;
+  printf("请输入一个数以求其阶乘：");
+  scanf("%d",&n);
+  for(i=1;i<=n;i++)
+  {
+    z=z*i;
+  }
+  printf("该阶乘为：%d",z);
+  return 0;
+}

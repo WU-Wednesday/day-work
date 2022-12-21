@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+  //算法实现：a中放最大值；b次之；中放最小值
+{
+  int a,b,c;
+  printf("请输入三个数：");
+  scanf("%d %d %d",&a,&b,&c);
+  if(a<b)
+  {
+    int tem=a;
+    a=b;
+    b=tem;
+  }
+  if(a<c)
+  {
+    int tem=a;
+    a=c;
+    c=tem;
+  }
+  if(b<c)
+  {
+    int tem=b;
+    b=c;
+    c=tem;
+  }
+  printf("%d %d %d",a,b,c);
+  return 0;
+}

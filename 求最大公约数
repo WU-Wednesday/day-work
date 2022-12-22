@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+	int m;
+	int n;
+	int r;
+	printf("请输入两个数：");
+	scanf("%d %d",&m,&n);
+	while(m%n!=0)
+	{
+		r=m%n;
+		m=n;
+		n=r;
+	}
+	printf("最大公约数为：%d\n",n);
+	return 0;
+}

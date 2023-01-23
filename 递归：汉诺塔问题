@@ -1,0 +1,36 @@
+#include <stdio.h>
+void Move(char A,char C)
+{
+  printf("%c --> %c\n",A,C);
+}
+void tower(int a,char A,char B,char C)//汉诺塔函数实施主体,A为初始柱,B为经由柱,C为目的柱
+{
+  if (a==1)
+  {
+    Move(A,C);
+  }
+  else
+  {
+    tower(a-1,A,C,B);//把n-1个圆盘从A（经过C）移到B
+    Move(A,C);
+    tower(a-1,B,A,C);//把B杆上的（n-1）个圆盘（经过A）移到C
+  }
+}
+int Tower(int num)
+{
+  if (num==1)
+    return 1;
+  else
+    return 2*Tower(num-1)+1;
+}
+int main()
+{
+  int a = 0;
+  int Num=0;
+  printf("请输入层数:");
+  scanf("%d",&a);
+  Num = Tower(a);
+  printf("%d层需要移动%d步\n", a, Num);
+  tower(a, 'A', 'B', 'C');//进入递归
+  return 0;
+}

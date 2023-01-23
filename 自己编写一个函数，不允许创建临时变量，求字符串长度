@@ -1,0 +1,20 @@
+#include<stdio.h>
+int my_strlen(char* str)
+{
+  //my_strlen("hi!")
+  //1++my_strlen("i!")
+  //1+1+my_strlen("!")
+  //1+1+1+my_strlen("")
+  //1+1+1+0
+  if(*str!='\0')
+    return 1+my_strlen(str+1);
+  else
+    return 0;
+}
+int main()
+{
+  char arr[]="hi!";
+  int len=my_strlen(arr);
+  printf("len=%d\n",len);
+  return 0;
+}

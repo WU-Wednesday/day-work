@@ -1,0 +1,25 @@
+#include <stdio.h>
+int Fib(int n)
+{
+  int a,b,c;
+  a=b=c=1;
+  while(n>2)
+  {
+    c=a+b;
+    a=b;
+    b=c;
+    n--;
+  }
+  return c;
+}
+int main()
+{
+    int n=0;
+  int ret=0;
+  printf("请输入：");
+  scanf("%d",&n);
+  //TDD-测试驱动开发
+  ret=Fib(n);
+  printf("第%d的数的斐波那契数是：%d\n",n,ret);
+  return 0;
+}
